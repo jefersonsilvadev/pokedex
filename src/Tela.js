@@ -16,7 +16,7 @@ export default function Tela()
         try {
             setPokemon(null)
             setAlertErro(0)
-            const { data } = await axios.get("https://pokeapi.co/api/v2/pokemon/"+pesquisa);
+            const { data } = await axios.get("https://pokeapi.co/api/v2/pokemon/"+pesquisa.toLowerCase());
             // Forma alternativa: .get(`https://pokeapi.co/api/v2/pokemon/${pesquisa}`)
             setPokemon(data);
         } catch (erro)
